@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flying Tito</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="game-shell">
+        <canvas id="canvas" aria-label="Flying Tito game"></canvas>
+
+        <section id="title-screen" class="screen">
+            <div class="card">
+                <h1>Flying Tito</h1>
+                <p>Use the arrow keys or WASD to fly. Avoid the birds and obstacles.</p>
+                <p id="loading-status" role="status">Loading…</p>
+                <button id="start-btn" disabled>START</button>
+            </div>
+        </section>
+
+        <section id="pause-screen" class="screen" hidden>
+            <div class="card">
+                <h2>PAUSED</h2>
+                <p>Press Space or Escape to resume.</p>
+                <button id="resume-btn">RESUME</button>
+            </div>
+        </section>
+
+        <section id="game-over-screen" class="screen" hidden>
+            <div class="card">
+                <h2>GAME OVER</h2>
+                <p>Your score: <span id="final-score">0</span></p>
+                <button id="retry-btn">TRY AGAIN</button>
+            </div>
+        </section>
+
+        <div id="devtools" class="devtools" hidden>
+            <button id="toggle-grid-btn" aria-pressed="false">Grid (G)</button>
+            <button id="toggle-hitboxes-btn" aria-pressed="false">Hitboxes (H)</button>
+        </div>
+    </main>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
